@@ -11,7 +11,6 @@ class IndexController extends Controller
     public function index(Request $request)
     {
     	$albumes = Album::with('artistas')->paginate(5);
-	    #dd($albumes);
 	    return view('index',compact("albumes"));
     }
 

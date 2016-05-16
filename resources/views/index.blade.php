@@ -15,7 +15,7 @@
         <div class="section_body_body separador_interno col-xs-8 col-xs-offset-2 overflow0 white sombra_caja">
             @if($albumes->count() > 0)
                 @foreach($albumes as $album)
-                    <table class="table table-hover">
+                    <table class="table table-hover">                        
                         <thead>
                             <tr>
                                 <th class="info text-center">Album</th>

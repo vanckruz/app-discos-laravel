@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="discografia">
 <head>
     <meta charset="UTF-8">
     <title>Jhonny Vasquez</title>
@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link type="image/png" rel="icon" href="{{ asset('img/favicon.png') }}" />
 </head>
-
 
 <body>
 <div class="header fullwidth purple">
@@ -45,6 +44,9 @@
     <script src="{{ asset('resources/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('resources/sweetalert/sweetalert.min.js') }}"></script>
     <script src="{{ asset('js/angular.min.js') }}"></script>
+    <script src="{{ asset('js/angular-route.js') }}"></script>
+    <script src="{{ asset('js/angular-resource.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script src="{{ asset('js/angular_controller.js') }}"></script>
 </body>
 </html>
