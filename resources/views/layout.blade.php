@@ -19,7 +19,22 @@
         <div class="col-xs-2">
             <img src="{{ url('img/music-album.png') }}" alt="App Logo" class="img-img-responsive">
         </div>
-        <div class="col-xs-10"><h1 class="white-text">Jhonny Vasquez - Test</h1></div>
+        <div class="col-xs-7"><h1 class="white-text">Jhonny Vasquez - Test</h1></div>
+        <div class="col-xs-1">
+            <a href="https://www.linkedin.com/in/jhonny-vasquez-674995ab?trk=nav_responsive_tab_profile" target="_blank">
+                <img src="{{ url('img/linkedin-logo.png') }}" class="img img-responsive">                
+            </a>
+        </div>
+        <div class="col-xs-1">
+            <a href="https://github.com/vanckruz" target="_blank">
+                <img src="{{ url('img/github-logo.png') }}" class="img img-responsive">                
+            </a>
+        </div>
+        <div class="col-xs-1">
+            <a href="http://jhonnyvasquez.hol.es/" target="_blank">
+                <img src="{{ url('img/domain.png') }}" class="img img-responsive">                
+            </a>
+        </div>
     </div>
 </div>
 
