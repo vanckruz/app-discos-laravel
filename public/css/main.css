@@ -76,6 +76,12 @@ body
 	margin-top: 2em;
 	margin-bottom: 2em;
 }
+.separador_top{
+	margin-top: 2em;	
+}
+.separador_bottom{
+	margin-bottom: 2em;	
+}
 .clear_all{
 	clear: both;
 }

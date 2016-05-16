@@ -12,7 +12,7 @@
             <div class="separador section_body_body separador_interno col-xs-8 col-xs-offset-2 overflow0 white sombra_caja">
                 @if($albumes->count() > 0)
                     @foreach($albumes as $album)
-                        <div class="clear_all titulo_album left black-text size-title">
+                        <div class="separador_top clear_all titulo_album left black-text size-title">
                          <div class="col-xs-2">
                              <img src="{{ url('img/sheet-music.png') }}" class="img img-responsive">
                          </div>  
@@ -26,21 +26,23 @@
                         <div class="col-xs-12">
                             <hr class="clear_all">
                         </div>
-                        <div class="clear_all separador_interno artistas ">
-                            <div class="col-xs-2 caja  text-center separador_interno">
-                                <img src="{{ url('img/musician.png') }}" class="img img-responsive">
-                                <p class="black-text">Artistas</p>
-                            </div>
-                            <div class="col-xs-10">
-                                @if($album->artistas != null)
-                                    <ul class="list-group">
-                                    @foreach($album->artistas as $artista)
-                                        <li class="list-group-item blue-text pointer">{{ $artista->artista_nombre }}</li>
-                                    @endforeach
-                                    </ul>
-                                @else
-                                    <p class="mensaje-alerta">No hay artistas asociados</p>
-                                @endif
+                        <div class="separador_interno artistas ">
+                            <div class="">
+                                <div class="col-xs-2 caja  text-center separador_interno">
+                                    <img src="{{ url('img/musician.png') }}" class="img img-responsive">
+                                    <p class="black-text">Artistas</p>
+                                </div>
+                                <div class="col-xs-10">
+                                    @if($album->artistas != null)
+                                        <ul class="list-group">
+                                        @foreach($album->artistas as $artista)
+                                            <li class="list-group-item blue-text pointer">{{ $artista->artista_nombre }}</li>
+                                        @endforeach
+                                        </ul>
+                                    @else
+                                        <p class="mensaje-alerta">No hay artistas asociados</p>
+                                    @endif
+                                </div>                                
                             </div>
                         </div>
                     @endforeach
