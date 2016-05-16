@@ -20,8 +20,14 @@ $(document).on("ready",function(){
 			   },function(){
 
 				}); 	
-			   
+
 			}); 	
 
 	});
+
+	$(".editar").on("click",function(e){
+		e.preventDefault();
+		$("#myModal").find(".modal-body").html("aqui es el beta");
+	});
+
 });

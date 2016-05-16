@@ -5,7 +5,7 @@
         <div class="row separador">
             <div class="section_body_title separador_interno col-xs-8 col-xs-offset-2 overflow0 white sombra_caja">
                 <p class="left size-title black-text">Albumes</p>
-                <button id="newAlbum" class="right btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Nuevo Album</button>
+                <button id="newAlbum" class="right btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span> Nuevo Album</button>
             </div>
         </div>
         <div class="row separador">
@@ -20,7 +20,7 @@
                             {{ $album->album_titulo }} - {{$album->album_fechapublicacion}}</div>
                          </div>
                         <div class="opciones right">
-                            <button class="btn btn-primary editar"><span class="glyphicon glyphicon-pencil"></span></button>
+                            <button class="btn btn-primary editar" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span></button>
                             <button class="btn btn-danger eliminar"><span class="glyphicon glyphicon-remove"></span></button>
                         </div>
                         <div class="col-xs-12">
@@ -58,4 +58,26 @@
             </div>
         </div>
     </div>
+
+<!-- Modal editar-->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>    
+<!-- Modal editar-->
 @stop
