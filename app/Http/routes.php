@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['uses' => 'IndexController@index', 'as' => 'index']);
+
+
+Route::resource('albumes', 'AlbumesController', 
+	[
+		'only' => ['index', 'store', 'update', 'destroy', 'show']
+	]);
