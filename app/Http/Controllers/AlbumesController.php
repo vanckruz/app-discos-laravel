@@ -11,7 +11,7 @@ class AlbumesController extends Controller
     public function index(Request $request)
     {
     	$albumes = Album::all()->with('artistas');
-	    dd($albumes);
+	    #dd($albumes);
 	    return view('index',compact("albumes"));
     }
 }

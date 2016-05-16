@@ -6,6 +6,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ asset('resources/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('resources/sweetalert/sweetalert.css') }}">
+    <link rel="stylesheet" href="{{ asset('resources/jquery-ui/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('resources/jquery-ui/jquery-ui.theme.css') }}">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <link type="image/png" rel="icon" href="{{ asset('img/favicon.png') }}" />
 </head>
@@ -24,6 +26,7 @@
 @yield('content')
 
     <script src="{{ asset('js/jquery-2.2.1.min.js') }}"></script>
+    <script src="{{ asset('resources/jquery-ui/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('resources/bootstrap/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('resources/sweetalert/sweetalert.min.js') }}"></script>
     <script src="{{ asset('js/angular.min.js') }}"></script>

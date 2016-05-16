@@ -91,5 +91,16 @@ body
 .caja{
 	border: 1px solid gray;
 }
-
-
+.centrado{
+	margin:auto;
+}
+.oculto{
+	display: none;
+}
+.artistas td[colspan="2"] .list-group{
+	max-height: 165px;
+	overflow-y: scroll;
+}
+select.ui-datepicker-month,select.ui-datepicker-year{
+	color: #000 !important;
+}
