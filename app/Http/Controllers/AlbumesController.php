@@ -10,8 +10,8 @@ class AlbumesController extends Controller
 
     public function index(Request $request)
     {
-
-    	$albumes = Album::all();
-	    return $albumes;
+    	$albumes = Album::all()->with('artistas');
+	    dd($albumes);
+	    return view('index',compact("albumes"));
     }
 }

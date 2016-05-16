@@ -15,6 +15,6 @@ class Album extends Model
     protected $primaryKey = 'album_id';
 
     public function artistas(){
-        return $this->hasMany('Artistas',$this->primaryKey);
+        return $this->hasMany('App\\Artista',$this->primaryKey);
     }
 }

@@ -1,0 +1,89 @@
+h1,p
+{
+	font-family: 'Roboto', sans-serif;
+}
+body
+{
+	background: url('../img/fondo.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.fullwitdh
+{
+	width: 100%;
+}
+.white
+{
+	background: #FFF;
+}
+.black{
+	background: #000;
+}
+.white-text
+{
+	color: #FFF;
+}
+.black-text
+{
+	color: #000;
+}
+.blue-text{
+	color:#06C;
+}
+.purple{
+	background: #250040;
+}
+.header h1{
+	margin-top: 1em;
+}
+.overflow0{
+	overflow: hidden;
+}
+.right{
+	float: right;
+}
+.left{
+	float: left;
+}
+.section_body_content{
+
+}
+.section_body_title{
+
+}
+.section_body_body{
+
+}.
+#newAlbum{
+	margin-top: 1em;
+}
+.separador_interno{
+	padding: 1em;
+}
+.mensaje-alerta{
+	font-size: 1.3em;
+	color: red;
+	text-align: center;
+}
+.sombra_caja{
+	box-shadow: 1px 0px 24px -4px rgba(0, 0, 0, 0.25);
+}
+.size-title{
+	font-size: 1.3em;
+}
+.separador{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+.clear_all{
+	clear: both;
+}
+.pointer{
+	cursor:pointer;
+}
+.caja{
+	border: 1px solid gray;
+}
+
+

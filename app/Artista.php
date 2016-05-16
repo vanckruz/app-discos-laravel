@@ -16,6 +16,6 @@ class Artista extends Model
     protected $primaryKey = 'artista_id';
 
     public function artistas(){
-        return $this->belongsTo('Artistas','album_id');
+        return $this->belongsTo('App\\Album','album_id');
     }
 }
