@@ -22,12 +22,17 @@ class ArtistasController extends Controller
 		
 	}
 
-	public function update(){
-
+	public function update(Request $request, $artista_id = null){
+    	$artista = Artista::find($artista_id);
+    	$artista->artista_nombre = $request->artista_edit;
+    	$artista->artista_rol    = $request->rol_edit;
+    	$artista->save();
+		return "Artista editado correctamente";
 	}
 
-	public function destroy(){
-
+	public function destroy($artista_id = null){
+    	Artista::find($artista_id)->delete();
+		return "Artista eliminado";
 	}
 
 

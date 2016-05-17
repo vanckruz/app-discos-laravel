@@ -57,7 +57,7 @@ class AlbumesController extends Controller
 
 	}
 
-	public function update(Request $request,$album_id){
+	public function update(Request $request, $album_id = null){
 		$album = Album::find($album_id);
 		$album->album_titulo           = $request->album_titulo_edit;
 		$album->album_fechapublicacion = $request->album_fecha_edit;
@@ -66,10 +66,11 @@ class AlbumesController extends Controller
 		return "Album editado exitosamente";
 	}
 
-	public function destroy($album_id){
+	public function destroy(Request $request, $album_id = null){
 		Album::find($album_id)->delete();
 		Artista::find($album_id)->delete();
+		
+		return "Album eliminado !";
 	}
-
 
 }

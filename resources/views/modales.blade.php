@@ -85,7 +85,7 @@
 <!-- Modal editar Album-->
 
 <!-- Modal editar-->
-<div id="modalEditArtista" class="modal fade" role="dialog">
+<div id="modalEditArtista" class="modal fade" role="dialog" ng-controller="editArtistaController">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -95,7 +95,7 @@
         <h4 class="modal-title">Editar artista</h4>
       </div>
       <div class="modal-body">
-        <form action="" id="form_edit_artista" method="post">    
+        <form action="{{ route('editar_artista') }}" id="form_edit_artista" method="post">    
             {{ csrf_field() }}
             <input type="hidden" id="albumid_edit" name="albumid_edit">
             <input type="hidden" id="artistaid_edit" name="artistaid_edit">
@@ -106,8 +106,11 @@
         </form>
       </div>
       <div class="modal-footer">
+        <div class="mensaje alert alert-success oculto text-center"><< msg >></div>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="submit" id="send_form_edit_album" class="btn btn-primary right"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar</button>
+        <button type="button" id="send_form_edit_album" class="btn btn-primary right" ng-click="editarArtista($event)">
+          <span class="glyphicon glyphicon-floppy-disk"></span> Guardar
+        </button>
       </div>
     </div>
 
