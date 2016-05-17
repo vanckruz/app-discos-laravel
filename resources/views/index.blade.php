@@ -53,7 +53,7 @@
                                          {{ $artista->artista_rol }}
                                          <span class="badge eliminar_artista" data-albumid="{{$album->album_id}}" data-id="{{$artista->artista_id}}" data-url="{{route('eliminar_artista')}}" ng-click="eliminarArtista($event)">X</span>
                                          <span class="badge editar_artista"  data-id="{{$artista->artista_id}}" data-artista="{{ $artista->artista_nombre }}" data-rol="{{ $artista->artista_rol }}" data-albumid="{{$album->album_id}}" data-toggle="modal" data-target="#modalEditArtista"><span class="glyphicon glyphicon-pencil"></span></span>
-                                            <!--</div>-->
+                                            </div>
                                         </li>
                                     @endforeach
                                     </ul>
