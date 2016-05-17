@@ -15,9 +15,10 @@ class AlbumesController extends Controller
     }
 
 	public function show($album_id){
-
+		$album = Album::with('artistas')->find($album_id);
+		return $album;
 	}
-		
+
 	public function store(Request $request){
 		$album = new Album();
 		$album->album_titulo = $request->titulo;
@@ -26,8 +27,8 @@ class AlbumesController extends Controller
 
 		/*Clasificación de los arreglos separados de la vista*/
 		$vector = [];
-		$_artistas 	= ["pepe","juan","maria"];
-		$_rol 		= ["rock","pop","jass"];
+		$_artistas 	= ( is_array($request->artistas) ? $request->artistas : [$request->artistas] );
+		$_rol 		= ( is_array($request->rol) ? $request->rol : [$request->rol] );
 
 		foreach ($_artistas as $artista) {
 			$vector['artista'][] = $artista;
@@ -52,16 +53,22 @@ class AlbumesController extends Controller
 			$artista->save();
 		}
 
-		return "Registro exitoso del album".$album->album_titulo;
+		return "Registro exitoso del album ".$album->album_titulo;
 
 	}
 
-	public function update(){
+	public function update(Request $request,$album_id){
+		$album = Album::find($album_id);
+		$album->album_titulo           = $request->album_titulo_edit;
+		$album->album_fechapublicacion = $request->album_fecha_edit;
+		$album->save();
 
+		return "Album editado exitosamente";
 	}
 
-	public function destroy(){
-
+	public function destroy($album_id){
+		Album::find($album_id)->delete();
+		Artista::find($album_id)->delete();
 	}
 
 

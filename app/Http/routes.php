@@ -14,11 +14,13 @@
 Route::get('/', ['uses' => 'IndexController@index', 'as' => 'index']);
 
 
+Route::get('/album', ['uses' => 'AlbumesController@index', 'as' => 'album']);
 Route::post('/album', ['uses' => 'AlbumesController@store', 'as' => 'crear_album']);
 Route::get('/album/{album_id}', ['uses' => 'AlbumesController@show', 'as' => 'detalle_album']);
-Route::put('/album/{album_id}', ['uses' => 'AlbumesController@update', 'as' => 'editar_album']);
+Route::put('/album/{album_id?}', ['uses' => 'AlbumesController@update', 'as' => 'editar_album']);
 Route::delete('/album/{album_id}', ['uses' => 'AlbumesController@destroy', 'as' => 'eliminar_album']);
 
+Route::get('/artista', ['uses' => 'ArtistasController@index', 'as' => 'artista']);
 Route::post('/artista', ['uses' => 'ArtistasController@store', 'as' => 'crear_artista']);
 Route::get('/artista/{artista_id}', ['uses' => 'ArtistasController@show', 'as' => 'detalle_artista']);
 Route::put('/artista/{artista_id}', ['uses' => 'ArtistasController@update', 'as' => 'editar_artista']);

@@ -1,3 +1,20 @@
+$.fn.serializeObject = function()
+{
+   var o = {};
+   var a = this.serializeArray();
+   $.each(a, function() {
+       if (o[this.name]) {
+           if (!o[this.name].push) {
+               o[this.name] = [o[this.name]];
+           }
+           o[this.name].push(this.value || '');
+       } else {
+           o[this.name] = this.value || '';
+       }
+   });
+   return o;
+};
+
 $(document).on("ready",function(){
 
 	$("#add_artistas").on("click",function(e){
@@ -12,9 +29,7 @@ $(document).on("ready",function(){
 		if( $(".dinamic_artistas").length > 1 ){
 			$(".dinamic_artistas:last").remove();
 		}
-	});	
-
-	
+	});		
 
 	$(".editar").on("click",function(e){
 		e.preventDefault();
@@ -92,3 +107,4 @@ $(document).on("ready",function(){
 	});
 
 });
+
