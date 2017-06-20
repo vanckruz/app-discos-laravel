@@ -1,4 +1,4 @@
-# Test para imputec
+# App de gestión de discos en laravel 5
 El presente proyecto de una gestión de discos esta realizado con html, css3, bootstrap, jquery, angular y laravel 5.
 
 ## Instalación
